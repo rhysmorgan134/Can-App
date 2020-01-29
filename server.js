@@ -5,7 +5,7 @@ var server = require('http').createServer(app);
 var io = require('socket.io')(server);
 
 var channel = can.createRawChannel("can1", true);
-channel.setRxFilters([{id:153,mask:153},{id:377}])
+channel.setRxFilters([{id:153,mask:153},{id:377, mask:377}])
 
 var carInfo = {};
 carInfo.speed = 0
