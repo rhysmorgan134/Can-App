@@ -25,9 +25,9 @@ setInterval(() => {
 
 channel.addListener("onMessage", function(msg) {
     if(msg.id===153){
-        carInfo.revs = msg.data.redUIntBE(4, 2)
+        carInfo.revs = (msg.data.readUIntBE(4, 2)) >> 3
     } else if (msg.id===377) {
-        tempSpeed = msg.data.redUIntBE(2, 3)
+        tempSpeed = msg.data.readUIntBE(2, 2)
         carInfo.speed = (tempSpeed * 0.65) / 100
     }
 })

@@ -1,4 +1,4 @@
-var socket = io.connect('192.168.0.85:3000');
+var socket = io.connect('localhost:3000');
 
 document.addEventListener("DOMContentLoaded", onDomReadyHandler())
 
